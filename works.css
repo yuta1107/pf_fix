@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+/* ===============================================
+   基本設定 (Base)
+   =============================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", "Helvetica Neue", Arial,
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* ===============================================
+   ヘッダー / タイトル (Header)
+   =============================================== */
+.title {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-logo {
+  font-size: 35px;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #000;
+  text-shadow: 3px 2px 1px #a8a9aa;
+}
+
+/* ===============================================
+   メインコンテンツ (Works)
+   =============================================== */
+.works {
+  flex: 1;
+  padding-bottom: 60px;
+}
+
+.works .title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.works-list {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+}
+
+/* 各作品カード */
+.works-item {
+  width: 100%;
+  display: block;
+}
+
+/* 画像エリア */
+.works-img {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.works-img img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background-color: antiquewhite;
+  transition: transform 0.3s ease;
+}
+
+.works-item:hover .works-img img {
+  transform: scale(1.05);
+}
+
+.works-name {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ===============================================
+   アニメーション設定 (Animation)
+   =============================================== */
+
+/* 1. 動きの定義：下から上にふわっと現れる */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.works-item {
+  width: 100%;
+  display: block;
+
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.works-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.works-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.works-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.works-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.works-item:nth-child(5) {
+  animation-delay: 1s;
+}
+
+/* ===============================================
+   スマホ対応 (Media Query)
+   =============================================== */
+@media (max-width: 768px) {
+  .works-list {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOGA STUDIO LUMINA | 心と体を整える場所</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8DA399",
+              accent: "#D4A373",
+              bgLight: "#F9F7F2",
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', "serif"],
+              sans: ['"Noto Sans JP"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header
+      id="header"
+      class="fixed w-full z-50 transition-all duration-300 bg-transparent text-white py-4"
+    >
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a
+          href="#"
+          class="text-2xl font-bold serif tracking-wider z-50 relative"
+          >LUMINA</a
+        >
+
+        <nav class="hidden md:flex space-x-8 text-sm tracking-wide">
+          <a href="#concept" class="hover:text-gray-200 transition">CONCEPT</a>
+          <a href="#classes" class="hover:text-gray-200 transition">CLASSES</a>
+          <a href="#plans" class="hover:text-gray-200 transition">PLANS</a>
+          <a href="#instructors" class="hover:text-gray-200 transition"
+            >INSTRUCTORS</a
+          >
+          <a href="#access" class="hover:text-gray-200 transition">ACCESS</a>
+          <a
+            href="#contact"
+            class="px-5 py-2 bg-white text-gray-800 rounded-full hover:bg-opacity-90 transition font-medium"
+            >体験予約</a
+          >
+        </nav>
+
+        <button id="menu-btn" class="md:hidden z-50 focus:outline-none">
+          <i data-lucide="menu" class="w-8 h-8"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- モバイルメニュー -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-white z-40 transform translate-x-full flex flex-col justify-center items-center space-y-8 text-gray-800"
+    >
+      <a href="#concept" class="text-xl mobile-link">Concept</a>
+      <a href="#classes" class="text-xl mobile-link">Classes</a>
+      <a href="#plans" class="text-xl mobile-link">Plans</a>
+      <a href="#instructors" class="text-xl mobile-link">Instructors</a>
+      <a href="#access" class="text-xl mobile-link">Access</a>
+      <a
+        href="#contact"
+        class="px-8 py-3 bg-primary text-white rounded-full mobile-link"
+        >体験予約</a
+      >
+    </div>
+
+    <!-- トップスクリーン -->
+    <section
+      class="relative h-screen w-full overflow-hidden flex items-center justify-center"
+    >
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        class="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src="./video/top_yoga.mp4" type="video/mp4" />
+        お使いのブラウザは動画タグに対応していません。
+      </video>
+
+      <div class="absolute inset-0 bg-black/40 z-10"></div>
+
+      <div class="relative z-20 text-center text-white px-4 fade-in">
+        <p class="text-sm md:text-base tracking-[0.2em] mb-4 text-shadow">
+          ヨガスタジオ ルミナ
+        </p>
+        <h1
+          class="text-4xl md:text-6xl lg:text-7xl font-light mb-8 serif leading-tight text-shadow"
+        >
+          本来の自分へ<br />還る時間。
+        </h1>
+        <p class="mb-10 text-gray-100 text-sm md:text-base text-shadow">
+          忙しい日々に、深呼吸と静寂を。<br />心と体が整う、あなただけのサンクチュアリ。
+        </p>
+        <a
+          href="#contact"
+          class="inline-block px-8 py-3 border border-white text-white hover:bg-white hover:text-gray-800 transition duration-300 tracking-widest text-sm md:text-base"
+        >
+          START YOUR JOURNEY
+        </a>
+      </div>
+
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20"
+      >
+        <i data-lucide="chevron-down" class="text-white w-6 h-6"></i>
+      </div>
+    </section>
+
+    <!-- コンセプト -->
+    <section id="concept" class="py-20 md:py-32 bg-bgLight">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2 fade-in">
+            <img
+              src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              alt="Yoga Pose"
+              class="rounded-lg shadow-xl w-full h-[500px] object-cover"
+            />
+          </div>
+          <div class="md:w-1/2 fade-in md:pl-10">
+            <h2 class="text-3xl md:text-4xl serif text-primary mb-6">
+              Mind & Body Connection
+            </h2>
+            <h3 class="text-xl font-medium mb-6 text-gray-800">
+              「頑張る」を手放し、「感じる」を大切に。
+            </h3>
+            <p class="text-gray-600 mb-6 leading-loose">
+              LUMINAは、20代から40代の女性のライフスタイルに寄り添うヨガスタジオです。<br />
+              仕事、家事、人間関係。日々の役割から少し離れて、マットの上ではただの「自分」に戻る。<br />
+              初心者から経験者まで、それぞれの身体と心のリズムに合わせたプログラムをご用意しています。
+            </p>
+            <ul class="space-y-4 text-gray-600">
+              <li class="flex items-center">
+                <i data-lucide="check" class="text-primary mr-3"></i>
+                初心者でも安心の少人数制クラス
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="text-primary mr-3"></i>
+                アロマ香るリラックス空間
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="text-primary mr-3"></i>
+                夜22時まで営業、仕事帰りにも通いやすい
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- クラス -->
+    <section id="classes" class="py-20 bg-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl serif text-gray-800 mb-4 fade-in">
+          Our Classes
+        </h2>
+        <p class="text-gray-500 mb-16 fade-in">
+          目的に合わせて選べる3つのスタイル
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-bgLight p-8 rounded-lg text-left fade-in btn-hover group cursor-pointer"
+          >
+            <div class="mb-6 overflow-hidden rounded-md h-48">
+              <img
+                src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Relax Yoga"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Relax & Aroma</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              深い呼吸とアロマの香りで、自律神経を整えるクラス。疲れを感じている方や睡眠の質を高めたい方に。
+            </p>
+            <span class="text-primary text-sm font-bold flex items-center"
+              >運動量：★☆☆ <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i
+            ></span>
+          </div>
+
+          <div
+            class="bg-bgLight p-8 rounded-lg text-left fade-in btn-hover group cursor-pointer"
+            style="transition-delay: 100ms"
+          >
+            <div class="mb-6 overflow-hidden rounded-md h-48">
+              <img
+                src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Basic Flow"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Basic Flow</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              呼吸に合わせて流れるように動くクラス。全身の血流を促し、程よい運動感でリフレッシュします。
+            </p>
+            <span class="text-primary text-sm font-bold flex items-center"
+              >運動量：★★☆ <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i
+            ></span>
+          </div>
+
+          <div
+            class="bg-bgLight p-8 rounded-lg text-left fade-in btn-hover group cursor-pointer"
+            style="transition-delay: 200ms"
+          >
+            <div class="mb-6 overflow-hidden rounded-md h-48">
+              <img
+                src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Detox Yoga"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-gray-800">Detox & Shape</h3>
+            <p class="text-gray-600 text-sm mb-4">
+              インナーマッスルにアプローチし、代謝を上げるクラス。ボディラインを整えたい方におすすめ。
+            </p>
+            <span class="text-primary text-sm font-bold flex items-center"
+              >運動量：★★★ <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- プラン -->
+    <section id="plans" class="py-20 bg-bgLight">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl serif text-center text-gray-800 mb-4 fade-in"
+        >
+          Price Plans
+        </h2>
+        <p class="text-center text-gray-500 mb-16 fade-in">
+          ライフスタイルに合わせて選べる3つのプラン
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div
+            class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition duration-300 fade-in border-t-4 border-gray-200 flex flex-col relative"
+          >
+            <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">
+              Drop-in
+            </h3>
+            <p class="text-gray-500 text-xs text-center mb-6">
+              都度払い・忙しい方に
+            </p>
+            <div class="text-center mb-8">
+              <span class="text-3xl font-serif font-bold text-gray-800"
+                >¥3,300</span
+              >
+              <span class="text-gray-500 text-sm">/ 1回</span>
+            </div>
+            <ul class="space-y-4 text-sm text-gray-600 mb-8 flex-grow">
+              <li class="flex items-center">
+                <i data-lucide="check" class="w-4 h-4 text-primary mr-2"></i>
+                入会金不要
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="w-4 h-4 text-primary mr-2"></i>
+                マットレンタル込み
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="w-4 h-4 text-primary mr-2"></i>
+                全クラス受講可能
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="block w-full py-3 border border-gray-300 text-center text-gray-600 rounded-full hover:bg-gray-50 transition"
+            >
+              予約する
+            </a>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 fade-in border-t-4 border-accent transform md:-translate-y-4 relative flex flex-col"
+            style="transition-delay: 100ms"
+          >
+            <div
+              class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-accent text-white px-4 py-1 rounded-full text-xs font-bold tracking-wider shadow-md"
+            >
+              POPULAR
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">
+              Monthly Free
+            </h3>
+            <p class="text-gray-500 text-xs text-center mb-6">
+              通い放題・習慣にしたい方に
+            </p>
+            <div class="text-center mb-8">
+              <span class="text-4xl font-serif font-bold text-accent"
+                >¥12,800</span
+              >
+              <span class="text-gray-500 text-sm">/ 月</span>
+            </div>
+            <ul class="space-y-4 text-sm text-gray-600 mb-8 flex-grow">
+              <li class="flex items-center">
+                <i data-lucide="check" class="w-4 h-4 text-accent mr-2"></i>
+                <strong>回数無制限</strong>
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="w-4 h-4 text-accent mr-2"></i>
+                オンラインレッスン無料
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="w-4 h-4 text-accent mr-2"></i>
+                マットキープ無料
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="w-4 h-4 text-accent mr-2"></i>
+                タオルレンタル付き
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="block w-full py-3 bg-accent text-center text-white font-bold rounded-full hover:opacity-90 transition shadow-md"
+            >
+              入会予約する
+            </a>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition duration-300 fade-in border-t-4 border-primary flex flex-col relative"
+            style="transition-delay: 200ms"
+          >
+            <h3 class="text-xl font-bold text-gray-800 mb-2 text-center">
+              Monthly 4
+            </h3>
+            <p class="text-gray-500 text-xs text-center mb-6">
+              月4回・週1ペースの方に
+            </p>
+            <div class="text-center mb-8">
+              <span class="text-3xl font-serif font-bold text-primary"
+                >¥8,800</span
+              >
+              <span class="text-gray-500 text-sm">/ 月</span>
+            </div>
+            <ul class="space-y-4 text-sm text-gray-600 mb-8 flex-grow">
+              <li class="flex items-center">
+                <i data-lucide="check" class="w-4 h-4 text-primary mr-2"></i>
+                月4回まで受講可能
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="w-4 h-4 text-primary mr-2"></i>
+                翌月繰越可（1回分）
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="check" class="w-4 h-4 text-primary mr-2"></i>
+                追加受講 ¥2,000/回
+              </li>
+            </ul>
+            <a
+              href="#contact"
+              class="block w-full py-3 border border-primary text-center text-primary rounded-full hover:bg-primary hover:text-white transition"
+            >
+              入会予約する
+            </a>
+          </div>
+        </div>
+
+        <p class="text-center text-xs text-gray-500 mt-12 fade-in">
+          ※入会金 ¥5,000 / 事務手数料 ¥3,000（体験当日入会で無料）<br />
+          ※価格は全て税込表示です
+        </p>
+      </div>
+    </section>
+
+    <!-- インストラクター紹介 -->
+    <section id="faq" class="py-20 bg-bgLight">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl serif text-center text-gray-800 mb-16 fade-in"
+        >
+          Instructors
+        </h2>
+
+        <div class="max-w-5xl mx-auto space-y-16">
+          <div
+            class="flex flex-col md:flex-row bg-bgLight rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500 fade-in group"
+          >
+            <div class="md:w-1/2 relative overflow-hidden h-72 md:h-[400px]">
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="SAYAKA"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-1000 ease-in-out"
+              />
+              <div
+                class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500"
+              ></div>
+            </div>
+
+            <div
+              class="p-8 md:p-12 md:w-1/2 flex flex-col justify-center text-left"
+            >
+              <div class="mb-6">
+                <p
+                  class="text-primary font-bold tracking-widest text-xs mb-2 uppercase"
+                >
+                  Top Instructor
+                </p>
+                <h3 class="text-3xl font-serif text-gray-800 mb-2">SAYAKA</h3>
+                <div class="h-1 w-12 bg-accent"></div>
+              </div>
+
+              <div class="mb-6 flex flex-wrap gap-2">
+                <span
+                  class="text-xs font-medium text-gray-600 bg-white px-3 py-1 rounded-full border border-gray-100"
+                  >RYT200</span
+                >
+                <span
+                  class="text-xs font-medium text-gray-600 bg-white px-3 py-1 rounded-full border border-gray-100"
+                  >マタニティヨガ資格</span
+                >
+              </div>
+
+              <p
+                class="text-gray-600 leading-loose text-justify text-sm md:text-base"
+              >
+                「ヨガは自分自身と向き合う優しい時間です。無理せず、心地よい範囲で動いていきましょう。初めての方でも安心して参加できるよう、お一人お一人の身体の癖を見ながら丁寧にサポートいたします。」
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row-reverse bg-bgLight rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500 fade-in group"
+          >
+            <div class="md:w-1/2 relative overflow-hidden h-72 md:h-[400px]">
+              <img
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="MIKI"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-1000 ease-in-out"
+              />
+              <div
+                class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500"
+              ></div>
+            </div>
+
+            <div
+              class="p-8 md:p-12 md:w-1/2 flex flex-col justify-center text-left"
+            >
+              <div class="mb-6">
+                <p
+                  class="text-primary font-bold tracking-widest text-xs mb-2 uppercase"
+                >
+                  Pilates & Yoga
+                </p>
+                <h3 class="text-3xl font-serif text-gray-800 mb-2">MIKI</h3>
+                <div class="h-1 w-12 bg-accent"></div>
+              </div>
+
+              <div class="mb-6 flex flex-wrap gap-2">
+                <span
+                  class="text-xs font-medium text-gray-600 bg-white px-3 py-1 rounded-full border border-gray-100"
+                  >ピラティス資格</span
+                >
+                <span
+                  class="text-xs font-medium text-gray-600 bg-white px-3 py-1 rounded-full border border-gray-100"
+                  >骨盤矯正</span
+                >
+              </div>
+
+              <p
+                class="text-gray-600 leading-loose text-justify text-sm md:text-base"
+              >
+                「身体の使い方が変わると、心もポジティブに変わります。ピラティスの要素を取り入れたレッスンで、体幹を鍛えながら美しい姿勢作りをお手伝いします。一緒に理想のボディラインを目指しましょう。」
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- よくある質問（Q&A） -->
+    <section id="access" class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-3xl">
+        <h2
+          class="text-3xl md:text-4xl serif text-center text-gray-800 mb-4 fade-in"
+        >
+          Q&A
+        </h2>
+        <p class="text-center text-gray-500 mb-12 fade-in">よくあるご質問</p>
+
+        <div class="space-y-4 fade-in">
+          <div class="faq-item border-b border-gray-200">
+            <button
+              class="faq-btn w-full py-6 flex justify-between items-center text-left focus:outline-none"
+            >
+              <span class="text-lg font-bold text-gray-800 flex items-center">
+                <span class="text-primary mr-4 text-xl font-serif">Q.</span>
+                身体が硬くても大丈夫ですか？
+              </span>
+              <i
+                data-lucide="chevron-down"
+                class="faq-icon w-5 h-5 text-gray-400 transition-transform duration-300"
+              ></i>
+            </button>
+            <div
+              class="faq-answer hidden pb-6 text-gray-600 leading-relaxed pl-8"
+            >
+              <span class="font-bold text-accent mr-2 font-serif">A.</span>
+              はい、まったく問題ありません。むしろ身体が硬い方こそ、ヨガの変化を感じやすいためおすすめです。インストラクターが無理のない範囲でサポートしますので、安心してご参加ください。
+            </div>
+          </div>
+
+          <div class="faq-item border-b border-gray-200">
+            <button
+              class="faq-btn w-full py-6 flex justify-between items-center text-left focus:outline-none"
+            >
+              <span class="text-lg font-bold text-gray-800 flex items-center">
+                <span class="text-primary mr-4 text-xl font-serif">Q.</span>
+                体験レッスンに必要な持ち物は？
+              </span>
+              <i
+                data-lucide="chevron-down"
+                class="faq-icon w-5 h-5 text-gray-400 transition-transform duration-300"
+              ></i>
+            </button>
+            <div
+              class="faq-answer hidden pb-6 text-gray-600 leading-relaxed pl-8"
+            >
+              <span class="font-bold text-accent mr-2 font-serif">A.</span>
+              動きやすい服装（Tシャツ、レギンスなど）のみお持ちください。お水（500ml）、フェイスタオル、ヨガマットは体験料金に含まれております。更衣室も完備しています。
+            </div>
+          </div>
+
+          <div class="faq-item border-b border-gray-200">
+            <button
+              class="faq-btn w-full py-6 flex justify-between items-center text-left focus:outline-none"
+            >
+              <span class="text-lg font-bold text-gray-800 flex items-center">
+                <span class="text-primary mr-4 text-xl font-serif">Q.</span>
+                予約のキャンセルはできますか？
+              </span>
+              <i
+                data-lucide="chevron-down"
+                class="faq-icon w-5 h-5 text-gray-400 transition-transform duration-300"
+              ></i>
+            </button>
+            <div
+              class="faq-answer hidden pb-6 text-gray-600 leading-relaxed pl-8"
+            >
+              <span class="font-bold text-accent mr-2 font-serif">A.</span>
+              はい、可能です。レッスン開始の2時間前までに、WEB予約システムまたはお電話にてご連絡をお願いいたします。それ以降のキャンセルは、1回分の消化となる場合がございます。
+            </div>
+          </div>
+
+          <div class="faq-item border-b border-gray-200">
+            <button
+              class="faq-btn w-full py-6 flex justify-between items-center text-left focus:outline-none"
+            >
+              <span class="text-lg font-bold text-gray-800 flex items-center">
+                <span class="text-primary mr-4 text-xl font-serif">Q.</span>
+                男性も入会できますか？
+              </span>
+              <i
+                data-lucide="chevron-down"
+                class="faq-icon w-5 h-5 text-gray-400 transition-transform duration-300"
+              ></i>
+            </button>
+            <div
+              class="faq-answer hidden pb-6 text-gray-600 leading-relaxed pl-8"
+            >
+              <span class="font-bold text-accent mr-2 font-serif">A.</span>
+              申し訳ございません。当スタジオは女性専用スタジオとなっております。インストラクター、スタッフも全員女性ですので、気兼ねなくリラックスしてレッスンを受けていただけます。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- アクセス -->
+    <section id="access" class="py-20 bg-bgLight">
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12"
+      >
+        <div class="md:w-1/2 fade-in">
+          <div
+            class="w-full h-80 bg-gray-200 rounded-lg flex items-center justify-center relative overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              class="absolute inset-0 w-full h-full object-cover opacity-50"
+              alt="Location context"
+            />
+            <span
+              class="bg-white px-4 py-2 rounded shadow z-10 font-bold text-gray-600"
+              >Google Map Area</span
+            >
+          </div>
+        </div>
+        <div class="md:w-1/2 fade-in">
+          <h2 class="text-3xl serif text-gray-800 mb-8">Access</h2>
+          <div class="space-y-4 text-gray-600">
+            <p>
+              <strong class="block text-gray-800">住所</strong> 〒150-0000
+              東京都渋谷区神宮前X-X-X LUMINAビル 3F
+            </p>
+            <p>
+              <strong class="block text-gray-800">アクセス</strong>
+              地下鉄「表参道駅」A2出口より徒歩3分
+            </p>
+            <p>
+              <strong class="block text-gray-800">営業時間</strong> 平日 10:00 -
+              22:00 / 土日祝 09:00 - 20:00
+            </p>
+            <p><strong class="block text-gray-800">定休日</strong> 月曜日</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 体験予約 -->
+    <section id="contact" class="py-20 bg-primary text-white">
+      <div class="container mx-auto px-6 max-w-2xl">
+        <div class="text-center mb-10 fade-in">
+          <h2 class="text-3xl md:text-4xl serif mb-4">Trial Lesson</h2>
+          <p class="opacity-90">
+            初回体験レッスン ¥1,000 / お水・タオル・マット付き<br />手ぶらでお越しいただけます。
+          </p>
+        </div>
+
+        <form
+          class="bg-white rounded-xl p-8 md:p-10 shadow-2xl text-gray-800 fade-in"
+        >
+          <div class="mb-6">
+            <label class="block text-sm font-bold mb-2" for="name"
+              >お名前</label
+            >
+            <input
+              class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white transition"
+              id="name"
+              type="text"
+              placeholder="山田 花子"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-sm font-bold mb-2" for="email"
+              >メールアドレス</label
+            >
+            <input
+              class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white transition"
+              id="email"
+              type="email"
+              placeholder="example@email.com"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-sm font-bold mb-2" for="course"
+              >ご希望のクラス</label
+            >
+            <select
+              class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white transition"
+              id="course"
+            >
+              <option>Relax & Aroma</option>
+              <option>Basic Flow</option>
+              <option>Detox & Shape</option>
+              <option>相談して決めたい</option>
+            </select>
+          </div>
+
+          <div class="mb-8">
+            <label class="block text-sm font-bold mb-2" for="message"
+              >ご質問・ご要望</label
+            >
+            <textarea
+              class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:bg-white transition"
+              id="message"
+              rows="3"
+              placeholder="お体の悩みなどあればご記入ください"
+            ></textarea>
+          </div>
+
+          <button
+            type="button"
+            onclick="alert('デモサイトのため送信されませんが、実装時には予約システムへ繋ぎます。')"
+            class="w-full bg-accent text-white font-bold py-4 rounded-lg hover:bg-[#c29263] transition duration-300 transform hover:-translate-y-1 shadow-md"
+          >
+            体験レッスンを予約する
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="bg-[#333] text-white py-10 text-center text-sm">
+      <div class="container mx-auto px-6">
+        <h2 class="text-2xl serif mb-6 tracking-widest">LUMINA</h2>
+        <div class="flex justify-center space-x-6 mb-8">
+          <a href="#" class="hover:text-primary transition"
+            ><i data-lucide="instagram"></i
+          ></a>
+          <a href="#" class="hover:text-primary transition"
+            ><i data-lucide="facebook"></i
+          ></a>
+          <a href="#" class="hover:text-primary transition"
+            ><i data-lucide="twitter"></i
+          ></a>
+        </div>
+        <p class="text-gray-400">
+          &copy; 2024 YOGA STUDIO LUMINA. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

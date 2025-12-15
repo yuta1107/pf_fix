@@ -1,0 +1,178 @@
+*,
+*,
+:before,
+*,
+:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", "Helvetica Neue", Arial,
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template:
+    " ...... ...... ...... " 0
+    " sect1  sect2  sect3  " 1fr
+    " ...... ...... ...... " 0
+    " sect4  sect5  sect6  " 1fr
+    " ...... ...... ...... " 0
+    " sect7  sect8  sect9  " 1fr
+    " ...... ...... ...... " 0
+    /1fr 1fr 1fr;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+/* サイトタイトル */
+#section1 {
+  grid-area: sect1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-logo {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 20px;
+}
+
+.site-logo {
+  color: rgb(0, 0, 0);
+  /* text-shadow: 3px 2px 1px #a8a9aa; */
+  text-shadow: 3px 2px 1px #d4d4d4;
+}
+/* 空白 */
+#section2 {
+  grid-area: sect2;
+}
+/* ワークス */
+#section2 {
+  grid-area: sect3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item a {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  color: #333;
+}
+
+.item a:hover {
+  opacity: 0.5;
+}
+/* プロフィール */
+#section3 {
+  grid-area: sect7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 30px;
+}
+/* 名前 */
+#section4 {
+  grid-area: sect5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.myname {
+  font-weight: bold;
+  line-height: 1.2;
+}
+/* イラスト */
+#section5 {
+  grid-area: sect9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+/* お問い合わせ */
+#section6 {
+  grid-area: sect8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Xリンク */
+.sns-link {
+  margin-top: 20px;
+}
+
+.sns-link a {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.sns-link a:hover {
+  opacity: 0.7;
+}
+
+.ad {
+  margin-top: 10px;
+}
+/* ----------------- */
+/* media Queries 768 */
+/* ----------------- */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.5rem;
+    /* text-align: center; */
+    display: grid;
+    grid-template:
+      " ... ..... ..... ..... ..... ..... ... " 0
+      " ... sect1 ..... sect2 ..... sect3 ... " 1fr
+      " ... ..... ..... ..... ..... ..... ... " 5px
+      " ... sect4 ..... sect5 ..... sect6 ... " 1fr
+      " ... ..... ..... ..... ..... ..... ... " 5px
+      " ... sect7 ..... sect8 ..... sect9 ... " 1fr
+      " ... ..... ..... ..... ..... ..... ... " 0
+      /5px 1fr 5px 1fr 5px 1fr 5px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}

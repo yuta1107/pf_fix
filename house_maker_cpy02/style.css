@@ -1,0 +1,669 @@
+/* ====================================
+   Reset & Base Styles
+   ==================================== */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+  color: #444;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  background-color: #fafafa;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border-radius: 4px;
+}
+
+li {
+  list-style: none;
+}
+
+/* ====================================
+   Typography
+   ==================================== */
+h1,
+h2,
+h3,
+.title,
+.section-title {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+/* ====================================
+   Animation (Fade In)
+   ==================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ====================================
+   Header & Nav
+   ==================================== */
+#header-title {
+  position: fixed;
+  top: 20px;
+  left: 40px;
+  z-index: 10;
+}
+
+.title h1 {
+  font-size: 24px;
+  color: #333;
+  letter-spacing: 0.1em;
+}
+
+/* ハンバーガーメニュー */
+.btn-gnavi {
+  display: none;
+}
+
+#global-navi {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  z-index: 10;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu li a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  position: relative;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #333;
+  transition: width 0.3s;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+/* ====================================
+   Main Visual Area
+   ==================================== */
+.main-visual {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 120px 20px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.s-text {
+  width: 300px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  line-height: 2.5;
+  font-family: "Noto Serif JP", serif;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.sliderArea {
+  width: 60%;
+  max-width: 700px;
+}
+
+/* Slick Slider Custom */
+.slick-slide img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.thumb {
+  margin-top: 10px;
+}
+
+.thumb .slick-slide {
+  margin: 0 5px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.thumb .slick-slide:hover,
+.thumb .slick-current {
+  opacity: 1;
+}
+
+.thumb img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+/* ====================================
+   News Feed
+   ==================================== */
+.newsfeed-area {
+  background: #fff;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto 100px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.n-title h2 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.newsfeed {
+  width: 600px;
+}
+
+.n-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.date {
+  font-size: 14px;
+  color: #888;
+  margin-right: 20px;
+  font-family: "Lato", sans-serif;
+}
+
+/* ====================================
+   Section 01 (Contents)
+   ==================================== */
+#section01 {
+  padding: 80px 20px;
+  background-color: #fcfcfc;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.s-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto 100px;
+}
+
+/* 画像と文字を交互に入れ替えるクラス */
+.s-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.mc-img {
+  width: 50%;
+}
+
+.mc-img img {
+  box-shadow: 10px 10px 0px #eee; /* ずらした影でおしゃれに */
+}
+
+.sc-text {
+  width: 40%;
+}
+
+.sc-text p {
+  line-height: 2.2;
+  text-align: justify;
+}
+
+.m-contents-btn {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.mc-btn {
+  display: inline-block;
+  padding: 15px 60px;
+  border: 1px solid #333;
+  background: #fff;
+  color: #333;
+  font-family: "Noto Serif JP", serif;
+  transition: all 0.3s;
+}
+
+.mc-btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* ====================================
+   Section 02 (Gallery)
+   ==================================== */
+#section02 {
+  padding: 100px 20px;
+}
+
+.section02-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.section02-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.s02-img {
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.section02-link:hover .s02-img {
+  transform: scale(1.1);
+}
+
+.section02-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+  font-family: "Noto Serif JP", serif;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+/* ====================================
+   Staff
+   ==================================== */
+.staff-prof {
+  padding: 100px 20px;
+  background: #fff;
+}
+
+.staff-list ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.staff-list li {
+  text-align: center;
+  width: 300px;
+}
+
+.staff-list img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 4px solid #f0f0f0;
+}
+
+.staff-list h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.staff-list p {
+  font-size: 14px;
+  color: #666;
+  text-align: left;
+}
+
+/* ====================================
+   Footer
+   ==================================== */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 60px 20px 20px;
+  text-align: center;
+}
+
+.page-top {
+  margin-bottom: 40px;
+}
+
+.page-top a {
+  display: inline-block;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.f-contents {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px;
+  margin-bottom: 60px;
+}
+
+.f-sitelogo p {
+  font-family: "Noto Serif JP", serif;
+  font-size: 24px;
+}
+
+.contact h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #fff;
+  border-bottom: none;
+}
+
+.info-data {
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-item i {
+  font-size: 20px;
+  color: #fff;
+}
+
+.copyright {
+  border-top: 1px solid #555;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* ====================================
+   Responsive (Smartphone)
+   ==================================== */
+@media screen and (max-width: 767px) {
+  /* --- ハンバーガーボタン --- */
+  .btn-gnavi {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  .btn-gnavi span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    transition: 0.4s;
+  }
+
+  .btn-gnavi span:nth-child(1) {
+    top: 0;
+  }
+  .btn-gnavi span:nth-child(2) {
+    top: 11px;
+  }
+  .btn-gnavi span:nth-child(3) {
+    bottom: 0;
+  }
+
+  /* 開いたとき（×印になる） */
+  .btn-gnavi.active span:nth-child(1) {
+    top: 11px;
+    transform: rotate(45deg);
+  }
+  .btn-gnavi.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .btn-gnavi.active span:nth-child(3) {
+    bottom: 11px;
+    transform: rotate(-45deg);
+  }
+
+  /* --- ナビゲーションメニュー本体 --- */
+  #global-navi {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    transition: all 0.4s;
+    z-index: 100;
+
+    /* 中身を中央揃え */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 開いたとき（画面内に出てくる） */
+  #global-navi.active {
+    right: 0;
+  }
+
+  /* メニューリストの見た目 */
+  .menu {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 0;
+  }
+
+  .menu li {
+    margin: 0;
+  }
+
+  .menu li a {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+  }
+
+  /* --- その他のレスポンシブ調整 --- */
+
+  /* メインビジュアル */
+  .main-visual {
+    flex-direction: column;
+    padding: 100px 20px 40px;
+    gap: 30px;
+  }
+
+  .s-text {
+    width: 100%;
+    writing-mode: horizontal-tb;
+    text-align: center;
+  }
+
+  .sliderArea {
+    width: 100%;
+  }
+
+  /* ニュース */
+  .newsfeed-area {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .newsfeed {
+    width: 100%;
+  }
+
+  /* セクション01 */
+  .s-container,
+  .s-container.reverse {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .mc-img,
+  .sc-text {
+    width: 100%;
+  }
+
+  /* セクション02 */
+  .s02-img {
+    width: 100%;
+    height: 200px;
+  }
+
+  /* スタッフ */
+  .staff-list ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* フッター */
+  .f-contents {
+    flex-direction: column;
+    gap: 40px;
+  }
+}

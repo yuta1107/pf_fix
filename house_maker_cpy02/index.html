@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio_house</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick-theme.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="slick.min.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="burger-box">
+        <!-- サイトタイトル -->
+        <header id="header-title">
+          <div class="title">
+            <h1>Yutaro-house</h1>
+          </div>
+        </header>
+        <p class="btn-gnavi">
+          <span></span>
+          <span></span>
+          <span></span>
+        </p>
+        <nav id="global-navi">
+          <ul class="menu">
+            <li><a href="#">Top</a></li>
+            <li><a href="#section01">Concept</a></li>
+            <li><a href="#section02">Gallery</a></li>
+            <li><a href="#section03">Staff</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- メインビジュアルテキスト -->
+        <div class="section main-visual">
+          <div class="s-text fade-in">
+            <p>
+              心地よい空間と、<br />
+              豊かな時間を紡ぐ。<br />
+              &emsp;あなたのための特別な住まい。
+            </p>
+          </div>
+          <!-- スライダーエリア -->
+          <div class="sliderArea fade-in">
+            <div class="slider_thumb slider">
+              <div><img src="img/house.jpg" alt="" /></div>
+              <div><img src="img/house2.jpg" alt="" /></div>
+              <div><img src="img/house3.jpg" alt="" /></div>
+              <div><img src="img/house4.jpg" alt="" /></div>
+              <div><img src="img/house5.jpg" alt="" /></div>
+            </div>
+            <div class="thumb">
+              <div><img src="img/house.jpg" alt="" /></div>
+              <div><img src="img/house2.jpg" alt="" /></div>
+              <div><img src="img/house3.jpg" alt="" /></div>
+              <div><img src="img/house4.jpg" alt="" /></div>
+              <div><img src="img/house5.jpg" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- お知らせ -->
+      <div class="newsfeed-area fade-in" id="n-container">
+        <div class="n-title">
+          <h2>News</h2>
+        </div>
+        <div class="newsfeed">
+          <ul class="n-list">
+            <li class="n-item">
+              <span class="date">2023/10/01</span>
+              <a class="n-link" href="">ウェブサイトをリニューアルしました</a>
+            </li>
+            <li class="n-item">
+              <span class="date">2023/09/15</span>
+              <a class="n-link" href="">秋の住宅相談会を開催します</a>
+            </li>
+            <li class="n-item">
+              <span class="date">2023/08/20</span>
+              <a class="n-link" href="">施工事例を追加しました</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- コンセプト -->
+      <section class="main-contents" id="section01">
+        <div class="section-title fade-in">
+          <h2>Concept</h2>
+        </div>
+
+        <div class="s-container fade-in">
+          <div class="mc-img">
+            <img src="img/living8.jpg" alt="リビング" />
+          </div>
+          <div class="sc-text">
+            <p>
+              光が降り注ぐ開放的なリビング。<br />
+              家族が集まり、会話が弾む空間デザイン。<br />
+              素材の温もりが、日常を豊かに彩ります。
+            </p>
+          </div>
+        </div>
+
+        <div class="s-container reverse fade-in">
+          <div class="mc-img">
+            <img src="img/living6.jpg" alt="ダイニング" />
+          </div>
+          <div class="sc-text">
+            <p>
+              静寂と安らぎを感じる場所。<br />
+              計算された照明と配置が、<br />
+              極上のリラックスタイムを演出します。
+            </p>
+          </div>
+        </div>
+
+        <div class="m-contents-btn fade-in">
+          <a class="mc-btn" href="">View More</a>
+        </div>
+      </section>
+
+      <!-- ギャラリー -->
+      <section id="section02" class="fade-in">
+        <div class="section-title">
+          <h2>Gallery</h2>
+        </div>
+        <div class="section02-list">
+          <div class="section02-item">
+            <a class="section02-link" href="#">
+              <p class="section02-text">Living</p>
+              <img
+                class="s02-img"
+                src="img/living5.jpg"
+                alt="明るい日差しが差し込むリビング"
+              />
+            </a>
+          </div>
+          <div class="section02-item">
+            <a class="section02-link" href="#">
+              <p class="section02-text">Kitchen</p>
+              <img
+                class="s02-img"
+                src="img/room3.jpg"
+                alt="デザインと機能性に優れたキッチン"
+              />
+            </a>
+          </div>
+          <div class="section02-item">
+            <a class="section02-link" href="#">
+              <p class="section02-text">Bath</p>
+              <img
+                class="s02-img"
+                src="img/bathroom.jpg"
+                alt="広々としたホテルのようなバスルーム"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- スタッフ -->
+      <section class="staff-prof fade-in" id="section03">
+        <div class="section-title">
+          <h2>Staff</h2>
+        </div>
+        <div class="staff-list">
+          <ul>
+            <li>
+              <img src="img/staff1.jpg" alt="" />
+              <h3>Manager</h3>
+              <p>お客様の夢を形にするお手伝いをいたします。</p>
+            </li>
+            <li>
+              <img src="img/staff2.jpg" alt="" />
+              <h3>Designer</h3>
+              <p>機能性と美しさを兼ね備えた提案を。</p>
+            </li>
+            <li>
+              <img src="img/staff3.jpg" alt="" />
+              <h3>Architect</h3>
+              <p>細部までこだわった設計をお約束します。</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- フッター -->
+      <footer id="footer">
+        <div class="page-top">
+          <a href="#">Top Page</a>
+        </div>
+
+        <div class="f-contents">
+          <div class="f-side">
+            <div class="f-sitelogo">
+              <p>Yutaro house</p>
+            </div>
+          </div>
+
+          <!-- コンタクト -->
+          <div class="f-contents-sub">
+            <div class="contact">
+              <h2>Contact</h2>
+            </div>
+            <div class="info-data">
+              <p>電話：03-1234-5678</p>
+              <p>メール：info@example.com</p>
+            </div>
+            <ul class="contact-list">
+              <li class="contact-item">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="contact-item">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li class="contact-item">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li class="contact-item">
+                <a href="#"><i class="fab fa-line"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>Copyright ©Yutaro-house. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="javascript.js"></script>
+    <script type="text/javascript" src="slider.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+*,
+*,
+:before,
+*,
+:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", "Helvetica Neue", Arial,
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#section1 {
+  grid-area: sect1;
+  display: flex;
+  justify-content: center;
+}
+
+.site-logo {
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 20px;
+  letter-spacing: 0.05em;
+}
+
+.site-logo a {
+  color: rgb(0, 0, 0);
+  text-shadow: 3px 2px 1px #a8a9aa;
+}
+
+.profile {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-to-top {
+  text-align: center;
+}

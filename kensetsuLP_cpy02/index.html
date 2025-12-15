@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>株式会社ゆうたろう建設</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+
+      .animate-gradient-text {
+        background: linear-gradient(
+          to right,
+          #1e3a8a 0%,
+          #3b82f6 25%,
+          #22d3ee 50%,
+          #3b82f6 75%,
+          #1e3a8a 100%
+        );
+        background-size: 200% auto;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textFlow 3s linear infinite;
+      }
+
+      @keyframes textFlow {
+        0% {
+          background-position: 0% center;
+        }
+        100% {
+          background-position: 200% center;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 antialiased font-['Noto_Sans_JP']">
+    <div class="flex min-h-screen">
+      <aside
+        class="hidden md:flex flex-col w-64 bg-blue-900 text-white h-screen sticky top-0 shadow-xl z-20 shrink-0"
+      >
+        <div class="p-6 text-center border-b border-blue-800">
+          <h1 class="text-xl font-black tracking-widest">YUTARO<br />CONST.</h1>
+          <p class="text-xs text-blue-300 mt-2">株式会社ゆうたろう建設</p>
+        </div>
+
+        <nav class="flex-1 py-6 overflow-y-auto">
+          <ul class="space-y-1">
+            <li>
+              <a
+                href="#"
+                class="block py-3 px-6 hover:bg-blue-800 border-l-4 border-transparent hover:border-orange-500 transition group"
+              >
+                <i
+                  class="fas fa-home w-6 text-center mr-2 text-blue-300 group-hover:text-white"
+                ></i>
+                トップ
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="block py-3 px-6 hover:bg-blue-800 border-l-4 border-transparent hover:border-orange-500 transition group"
+              >
+                <i
+                  class="fas fa-info-circle w-6 text-center mr-2 text-blue-300 group-hover:text-white"
+                ></i>
+                3つの特徴
+              </a>
+            </li>
+            <li>
+              <a
+                href="#flow"
+                class="block py-3 px-6 hover:bg-blue-800 border-l-4 border-transparent hover:border-orange-500 transition group"
+              >
+                <i
+                  class="fas fa-clock w-6 text-center mr-2 text-blue-300 group-hover:text-white"
+                ></i>
+                現場の1日
+              </a>
+            </li>
+            <li>
+              <a
+                href="#staff"
+                class="block py-3 px-6 hover:bg-blue-800 border-l-4 border-transparent hover:border-orange-500 transition group"
+              >
+                <i
+                  class="fas fa-users w-6 text-center mr-2 text-blue-300 group-hover:text-white"
+                ></i>
+                社員の声
+              </a>
+            </li>
+            <li>
+              <a
+                href="#works"
+                class="block py-3 px-6 hover:bg-blue-800 border-l-4 border-transparent hover:border-orange-500 transition group"
+              >
+                <i
+                  class="fas fa-building w-6 text-center mr-2 text-blue-300 group-hover:text-white"
+                ></i>
+                施工実績
+              </a>
+            </li>
+            <li>
+              <a
+                href="#requirements"
+                class="block py-3 px-6 hover:bg-blue-800 border-l-4 border-transparent hover:border-orange-500 transition group"
+              >
+                <i
+                  class="fas fa-file-alt w-6 text-center mr-2 text-blue-300 group-hover:text-white"
+                ></i>
+                募集要項
+              </a>
+            </li>
+            <li>
+              <a
+                href="#faq"
+                class="block py-3 px-6 hover:bg-blue-800 border-l-4 border-transparent hover:border-orange-500 transition group"
+              >
+                <i
+                  class="fas fa-question-circle w-6 text-center mr-2 text-blue-300 group-hover:text-white"
+                ></i>
+                Q & A
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="p-4 bg-blue-950">
+          <a
+            href="#contact"
+            class="block bg-orange-500 hover:bg-orange-600 text-white text-center font-bold py-3 rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105"
+          >
+            見学に申し込む
+          </a>
+        </div>
+      </aside>
+
+      <main class="flex-1 w-full relative">
+        <header class="bg-white shadow-md fixed w-full z-50 md:hidden">
+          <div
+            class="container mx-auto px-4 py-3 flex justify-between items-center"
+          >
+            <h1 class="text-xl font-bold text-blue-800">ゆうたろう建設</h1>
+            <a
+              href="#contact"
+              class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full text-sm transition duration-300"
+            >
+              まずは見学
+            </a>
+          </div>
+        </header>
+
+        <!-- セクション＿ヒーロー -->
+
+        <section
+          class="hero-bg h-screen flex items-center justify-center text-center text-white px-4 pt-16 relative bg-gray-800"
+          style="
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+              ),
+              url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+          "
+        >
+          <div class="max-w-4xl">
+            <p
+              class="text-lg md:text-2xl font-bold mb-4 text-yellow-400"
+              data-aos="fade-down"
+            >
+              未経験・異業種からの転職歓迎
+            </p>
+            <h2
+              class="text-4xl md:text-6xl font-black mb-6 leading-tight"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              「見て覚えろ」は、もう古い。<br />
+              <span class="text-3xl md:text-5xl"
+                >iPad支給・完全マニュアル化でプロへ。</span
+              >
+            </h2>
+            <div
+              class="flex flex-col md:flex-row justify-center gap-4 mb-8"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="bg-blue-900/80 px-6 py-2 rounded font-bold">
+                月給30万円〜
+              </div>
+              <div class="bg-blue-900/80 px-6 py-2 rounded font-bold">
+                完全週休2日(土日)
+              </div>
+              <div class="bg-blue-900/80 px-6 py-2 rounded font-bold">
+                残業ほぼなし
+              </div>
+            </div>
+            <a
+              href="#contact"
+              class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transform hover:scale-105 transition duration-300"
+              data-aos="zoom-in"
+              data-aos-delay="600"
+            >
+              30秒で見学申し込み <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+          </div>
+        </section>
+
+        <!-- セクション＿企業イメージ -->
+
+        <section id="about" class="py-20 bg-white">
+          <div class="container mx-auto px-4">
+            <h3
+              class="text-3xl font-bold text-center mb-12 animate-gradient-text"
+              data-aos="fade-up"
+            >
+              建設業に<br class="md:hidden" />こんなイメージありませんか？
+            </h3>
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"
+            >
+              <div
+                class="bg-gray-100 p-8 rounded-xl text-center"
+                data-aos="fade-up"
+                data-aos-delay="0"
+              >
+                <i class="fas fa-user-injured text-5xl text-gray-400 mb-4"></i>
+                <h4 class="text-xl font-bold mb-2">先輩が怖そう...</h4>
+                <p class="text-sm text-gray-600">
+                  怒鳴られたり、見て覚える理不尽な指導がありそう。
+                </p>
+              </div>
+              <div
+                class="bg-gray-100 p-8 rounded-xl text-center"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <i
+                  class="fas fa-calendar-times text-5xl text-gray-400 mb-4"
+                ></i>
+                <h4 class="text-xl font-bold mb-2">休みがない...</h4>
+                <p class="text-sm text-gray-600">
+                  土日も仕事で、家族や趣味の時間が取れなそう。
+                </p>
+              </div>
+              <div
+                class="bg-gray-100 p-8 rounded-xl text-center"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <i class="fas fa-hard-hat text-5xl text-gray-400 mb-4"></i>
+                <h4 class="text-xl font-bold mb-2">体がきつい...</h4>
+                <p class="text-sm text-gray-600">
+                  重いものを運んで、腰を痛めてしまいそう。
+                </p>
+              </div>
+            </div>
+            <div
+              class="text-center mt-12"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <p class="text-2xl font-bold text-blue-600">
+                当社なら、その心配は<br class="md:hidden" />一切不要です！
+              </p>
+              <div class="text-5xl mt-4 text-blue-600 animate-bounce">
+                <i class="fas fa-arrow-down"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- セクション＿PR -->
+
+        <section class="py-20 bg-blue-50">
+          <div class="container mx-auto px-4">
+            <h3
+              class="text-3xl font-bold text-center mb-12 animate-gradient-text"
+              data-aos="fade-up"
+            >
+              ゆうたろう建設が<br class="md:hidden" />働きやすい3つの理由
+            </h3>
+
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden max-w-5xl mx-auto mb-8 flex flex-col md:flex-row"
+              data-aos="fade-up"
+            >
+              <div class="md:w-1/2 bg-gray-300 h-64 md:h-auto relative">
+                <img
+                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  class="absolute inset-0 w-full h-full object-cover"
+                  alt="タブレット作業"
+                />
+              </div>
+              <div class="p-8 md:w-1/2 flex flex-col justify-center">
+                <span class="text-blue-600 font-bold mb-2">POINT 01</span>
+                <h4 class="text-2xl font-bold mb-4">
+                  ICT活用で「力仕事」を削減
+                </h4>
+                <p class="text-gray-600 leading-relaxed">
+                  ドローンによる測量や、タブレットでの図面管理を徹底。重い資材運びは機械が行います。体への負担を最小限にし、長く働ける環境を整えています。
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden max-w-5xl mx-auto mb-8 flex flex-col md:flex-row-reverse"
+              data-aos="fade-up"
+            >
+              <div class="md:w-1/2 bg-gray-300 h-64 md:h-auto relative">
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  class="absolute inset-0 w-full h-full object-cover"
+                  alt="笑顔のスタッフ"
+                />
+              </div>
+              <div class="p-8 md:w-1/2 flex flex-col justify-center">
+                <span class="text-blue-600 font-bold mb-2">POINT 02</span>
+                <h4 class="text-2xl font-bold mb-4">怒鳴る上司はいません</h4>
+                <p class="text-gray-600 leading-relaxed">
+                  平均年齢32歳。わからないことは動画マニュアルで確認できるので、「何度も聞くな」と怒られることはありません。フラットで話しやすい社風です。
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden max-w-5xl mx-auto flex flex-col md:flex-row"
+              data-aos="fade-up"
+            >
+              <div class="md:w-1/2 bg-gray-300 h-64 md:h-auto relative">
+                <img
+                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  class="absolute inset-0 w-full h-full object-cover"
+                  alt="資格勉強"
+                />
+              </div>
+              <div class="p-8 md:w-1/2 flex flex-col justify-center">
+                <span class="text-blue-600 font-bold mb-2">POINT 03</span>
+                <h4 class="text-2xl font-bold mb-4">資格費用は全額会社負担</h4>
+                <p class="text-gray-600 leading-relaxed">
+                  施工管理技士などの国家資格取得を全力サポート。受験費用はもちろん、スクール代も会社が出します。手に職をつければ、一生食いっぱぐれません。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- セクション＿現場の一日 -->
+
+        <section id="flow" class="py-20 bg-white">
+          <div class="container mx-auto px-4 max-w-5xl">
+            <h3
+              class="text-3xl font-bold text-center mb-12 animate-gradient-text"
+              data-aos="fade-up"
+            >
+              現場の一日（例）
+            </h3>
+            <div
+              class="relative border-l-4 border-blue-200 ml-4 md:ml-0 md:pl-8 space-y-12"
+            >
+              <div
+                class="relative flex flex-col md:flex-row items-start"
+                data-aos="fade-right"
+              >
+                <div
+                  class="absolute -left-3 md:-left-11 top-0 w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow"
+                ></div>
+                <div
+                  class="pl-6 md:pl-0 md:w-24 font-bold text-xl text-blue-600"
+                >
+                  08:00
+                </div>
+                <div class="pl-6 md:pl-8 flex-1">
+                  <h4 class="font-bold text-lg mb-2">朝礼・業務開始</h4>
+                  <p class="text-gray-600 text-sm">
+                    現場スタッフと当日の作業内容を確認。ラジオ体操で体をほぐします。
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="relative flex flex-col md:flex-row items-start"
+                data-aos="fade-right"
+              >
+                <div
+                  class="absolute -left-3 md:-left-11 top-0 w-6 h-6 bg-blue-300 rounded-full border-4 border-white shadow"
+                ></div>
+                <div
+                  class="pl-6 md:pl-0 md:w-24 font-bold text-xl text-blue-400"
+                >
+                  10:00
+                </div>
+                <div class="pl-6 md:pl-8 flex-1">
+                  <h4 class="font-bold text-lg mb-2">小休憩（30分）</h4>
+                  <p class="text-gray-600 text-sm">
+                    集中力を保つためにしっかり休みます。缶コーヒーで一服。
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="relative flex flex-col md:flex-row items-start"
+                data-aos="fade-right"
+              >
+                <div
+                  class="absolute -left-3 md:-left-11 top-0 w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow"
+                ></div>
+                <div
+                  class="pl-6 md:pl-0 md:w-24 font-bold text-xl text-blue-600"
+                >
+                  10:30
+                </div>
+                <div class="pl-6 md:pl-8 flex-1">
+                  <h4 class="font-bold text-lg mb-2">現場写真撮影・管理</h4>
+                  <p class="text-gray-600 text-sm">
+                    工事の進捗をiPadで撮影。事務所に戻らずその場でデータ整理が完了します。
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="relative flex flex-col md:flex-row items-start"
+                data-aos="fade-right"
+              >
+                <div
+                  class="absolute -left-3 md:-left-11 top-0 w-6 h-6 bg-orange-400 rounded-full border-4 border-white shadow"
+                ></div>
+                <div
+                  class="pl-6 md:pl-0 md:w-24 font-bold text-xl text-orange-500"
+                >
+                  12:00
+                </div>
+                <div class="pl-6 md:pl-8 flex-1">
+                  <h4 class="font-bold text-lg mb-2">お昼休憩（60分）</h4>
+                  <p class="text-gray-600 text-sm">
+                    しっかり1時間。お弁当を食べたり、仮眠を取ったり、自由に過ごします。
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="relative flex flex-col md:flex-row items-start"
+                data-aos="fade-right"
+              >
+                <div
+                  class="absolute -left-3 md:-left-11 top-0 w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow"
+                ></div>
+                <div
+                  class="pl-6 md:pl-0 md:w-24 font-bold text-xl text-blue-600"
+                >
+                  13:00
+                </div>
+                <div class="pl-6 md:pl-8 flex-1">
+                  <h4 class="font-bold text-lg mb-2">午後の作業開始</h4>
+                  <p class="text-gray-600 text-sm">
+                    安全確認をして作業再開。午後は明日の資材手配なども行います。
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="relative flex flex-col md:flex-row items-start"
+                data-aos="fade-right"
+              >
+                <div
+                  class="absolute -left-3 md:-left-11 top-0 w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow"
+                ></div>
+                <div
+                  class="pl-6 md:pl-0 md:w-24 font-bold text-xl text-blue-600"
+                >
+                  17:00
+                </div>
+                <div class="pl-6 md:pl-8 flex-1">
+                  <h4 class="font-bold text-lg mb-2">業務終了・帰宅</h4>
+                  <p class="text-gray-600 text-sm">
+                    片付けをして終了！残業はほとんどないので、趣味の時間や家族との時間を大切にできます。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- セクション＿スタッフの声 -->
+
+        <section id="staff" class="py-20 bg-gray-50">
+          <div class="container mx-auto px-4">
+            <h3
+              class="text-3xl font-bold text-center mb-12 animate-gradient-text"
+              data-aos="fade-up"
+            >
+              先輩社員の声
+            </h3>
+
+            <div class="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto">
+              <div class="flex flex-col gap-8 md:w-1/2">
+                <div
+                  class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row"
+                  data-aos="fade-up"
+                >
+                  <div class="md:w-2/5 h-64 md:h-auto relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      alt="社員A"
+                      class="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
+                    <p class="text-sm text-blue-600 font-bold mb-2">
+                      入社2年目 / 元飲食店勤務
+                    </p>
+                    <h4 class="text-xl font-bold mb-4">
+                      「IT化が進んでいて驚きました」
+                    </h4>
+                    <p class="text-gray-600 leading-relaxed">
+                      前職は飲食店でしたが、コロナ禍で将来が不安になり建設業へ。最初は「怖い人が多そう」と思っていましたが、ゆうたろう建設は本当に雰囲気が良いです。iPadで図面を見たり、チャットで報告したりと、想像以上にスマートな働き方で驚きました。
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row"
+                  data-aos="fade-up"
+                >
+                  <div class="md:w-2/5 h-64 md:h-auto relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      alt="社員C"
+                      class="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
+                    <p class="text-sm text-green-500 font-bold mb-2">
+                      入社3年目 / 元アパレル
+                    </p>
+                    <h4 class="text-xl font-bold mb-4">
+                      「女性も働きやすい環境です」
+                    </h4>
+                    <p class="text-gray-600 leading-relaxed">
+                      「建設現場＝男性の職場」というイメージがありましたが、ここは女性監督も活躍中。トイレなどの衛生面も綺麗に整備されていて安心しました。力仕事はほとんどなく、段取りやコミュニケーションが中心なので、接客業の経験が活きています。
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row"
+                  data-aos="fade-up"
+                >
+                  <div class="md:w-2/5 h-64 md:h-auto relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      alt="社員E"
+                      class="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
+                    <p class="text-sm text-cyan-500 font-bold mb-2">
+                      入社1年目 / 新卒採用
+                    </p>
+                    <h4 class="text-xl font-bold mb-4">
+                      「ゼロからでも丁寧に教えてくれます」
+                    </h4>
+                    <p class="text-gray-600 leading-relaxed">
+                      建築の知識が全くなく不安でしたが、先輩がマンツーマンでついてくれる「メンター制度」のおかげで、少しずつ仕事を覚えられています。失敗しても「次はこうしよう」と前向きにアドバイスをくれるので、失敗を恐れずに挑戦できています。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-8 md:w-1/2 md:mt-24">
+                <div
+                  class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div class="md:w-2/5 h-64 md:h-auto relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      alt="社員B"
+                      class="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
+                    <p class="text-sm text-orange-500 font-bold mb-2">
+                      入社5年目 / 施工管理技士
+                    </p>
+                    <h4 class="text-xl font-bold mb-4">
+                      「土日にしっかり休めるのが魅力」
+                    </h4>
+                    <p class="text-gray-600 leading-relaxed">
+                      以前の会社では土曜出勤が当たり前でしたが、ここでは完全週休2日制が徹底されています。週末は子供とキャンプに行けるようになり、家族も喜んでいます。資格取得の費用も出してくれるので、今年は1級施工管理技士に挑戦中です。
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div class="md:w-2/5 h-64 md:h-auto relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      alt="社員D"
+                      class="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
+                    <p class="text-sm text-yellow-600 font-bold mb-2">
+                      入社10年目 / 工事部長
+                    </p>
+                    <h4 class="text-xl font-bold mb-4">
+                      「地図に残る仕事のやりがい」
+                    </h4>
+                    <p class="text-gray-600 leading-relaxed">
+                      何もない更地に、少しずつ建物が出来上がっていく過程は何度見ても感動します。完成したビルを家族に見せた時、「これパパが作ったんだよ」と胸を張って言えるのが一番の喜びですね。大きなプロジェクトを任せてもらえるので、成長実感も大きいです。
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div class="md:w-2/5 h-64 md:h-auto relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      alt="社員F"
+                      class="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-6 md:p-8 md:w-3/5 flex flex-col justify-center">
+                    <p class="text-sm text-red-500 font-bold mb-2">
+                      入社4年目 / 異業種管理職
+                    </p>
+                    <h4 class="text-xl font-bold mb-4">
+                      「頑張りが収入に直結します」
+                    </h4>
+                    <p class="text-gray-600 leading-relaxed">
+                      40代での転職でしたが、今までの管理職経験を評価してもらい、前職よりも年収が上がりました。会社の業績が良いと決算賞与もしっかり出るので、家のローンの返済計画も早まりそうです。安定した基盤があるのが心強いですね。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- セクション＿キャリアステップ -->
+
+        <section class="py-20 bg-blue-900 text-white">
+          <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold mb-12" data-aos="fade-up">
+              入社後のキャリアステップ
+            </h3>
+            <div
+              class="flex flex-col md:flex-row justify-center gap-6 max-w-6xl mx-auto"
+            >
+              <div
+                class="bg-blue-800 p-6 rounded-lg flex-1 border border-blue-700"
+                data-aos="fade-up"
+                data-aos-delay="0"
+              >
+                <div class="text-yellow-400 font-bold text-xl mb-2">STEP 1</div>
+                <h4 class="text-2xl font-bold mb-4">アシスタント</h4>
+                <p class="text-sm text-blue-200 mb-4">入社1〜3年目</p>
+                <p class="text-3xl font-bold mb-4">月給 30万円〜</p>
+                <p class="text-sm leading-relaxed">
+                  まずは先輩のサポートから。写真撮影や安全管理など、基礎をマニュアルで学びます。
+                </p>
+              </div>
+
+              <div class="hidden md:flex items-center text-3xl text-yellow-400">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+              <div class="md:hidden text-3xl text-yellow-400 py-2">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+
+              <div
+                class="bg-blue-800 p-6 rounded-lg flex-1 border border-blue-700"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="text-yellow-400 font-bold text-xl mb-2">STEP 2</div>
+                <h4 class="text-2xl font-bold mb-4">現場監督（資格取得）</h4>
+                <p class="text-sm text-blue-200 mb-4">入社3〜5年目</p>
+                <p class="text-3xl font-bold mb-4">月給 45万円〜</p>
+                <p class="text-sm leading-relaxed">
+                  国家資格を取得し、小規模な現場を一人で担当。部下の育成にも携わります。
+                </p>
+              </div>
+
+              <div class="hidden md:flex items-center text-3xl text-yellow-400">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+              <div class="md:hidden text-3xl text-yellow-400 py-2">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+
+              <div
+                class="bg-blue-800 p-6 rounded-lg flex-1 border border-blue-700 relative overflow-hidden"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <div
+                  class="absolute top-0 right-0 bg-yellow-500 text-blue-900 text-xs font-bold px-3 py-1"
+                >
+                  目指せます
+                </div>
+                <div class="text-yellow-400 font-bold text-xl mb-2">STEP 3</div>
+                <h4 class="text-2xl font-bold mb-4">工事責任者</h4>
+                <p class="text-sm text-blue-200 mb-4">入社5年目〜</p>
+                <p class="text-3xl font-bold mb-4">月給 60万円〜</p>
+                <p class="text-sm leading-relaxed">
+                  大型プロジェクトの総責任者へ。年収800万円以上も十分に狙えるポジションです。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- セクション＿代表あいさつ -->
+
+        <section class="py-20 bg-white">
+          <div class="container mx-auto px-4 max-w-5xl">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+              <div class="md:w-1/3" data-aos="fade-up">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  alt="代表写真"
+                  class="rounded-lg shadow-xl w-full"
+                />
+              </div>
+              <div class="md:w-2/3" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-2xl font-bold mb-4 animate-gradient-text">
+                  「建設業＝きつい」という常識を、<br />一緒に壊していきませんか。
+                </h3>
+                <p class="text-gray-600 leading-loose mb-6">
+                  こんにちは、代表のゆうたろうです。<br />
+                  私たちの生活を支える建物や道路を作る建設業は、本来とても誇らしい仕事です。しかし、長時間労働や厳しい上下関係といった古い慣習が、若い人たちを遠ざけてきました。<br /><br />
+
+                  だからこそ、ゆうたろう建設は変わりました。<br />
+                  最新のテクノロジーを導入して効率化し、休める環境を作る。
+                  未経験でも安心して学べる教育システムを作る。<br />
+
+                  経験や知識は一切問いません。「手に職をつけて稼ぎたい」「プライベートも大切にしたい」。そんな素直な思いを持った方と、一緒にお仕事ができることを楽しみにしています。
+                </p>
+                <p class="font-bold text-lg text-right">
+                  代表取締役社長　ゆうたろう
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- セクション＿実績 -->
+
+        <section id="works" class="py-20 bg-gray-50">
+          <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16" data-aos="fade-up">
+              <h3 class="text-3xl font-bold mb-4 animate-gradient-text">
+                数字と事例で見る<br />ゆうたろう建設の実績
+              </h3>
+              <p class="text-gray-600">
+                創業以来、地域の街づくりに貢献してきました。<br />
+                安定した基盤があるからこそ、安心して長く働けます。
+              </p>
+            </div>
+
+            <div
+              class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 border-b border-gray-200 pb-12"
+            >
+              <div class="text-center">
+                <div class="text-4xl md:text-5xl font-black text-blue-600 mb-2">
+                  <span class="counter" data-target="14">0</span
+                  ><span class="text-lg text-gray-500 font-normal ml-1"
+                    >年</span
+                  >
+                </div>
+                <div class="text-sm font-bold text-gray-600">創業</div>
+              </div>
+              <div class="text-center">
+                <div class="text-4xl md:text-5xl font-black text-blue-600 mb-2">
+                  <span class="counter" data-target="2000">0</span
+                  ><span class="text-lg text-gray-500 font-normal ml-1"
+                    >件</span
+                  >
+                </div>
+                <div class="text-sm font-bold text-gray-600">累計施工実績</div>
+              </div>
+              <div class="text-center">
+                <div class="text-4xl md:text-5xl font-black text-blue-600 mb-2">
+                  <span class="counter" data-target="95">0</span
+                  ><span class="text-lg text-gray-500 font-normal ml-1">%</span>
+                </div>
+                <div class="text-sm font-bold text-gray-600">社員定着率</div>
+              </div>
+              <div class="text-center">
+                <div class="text-4xl md:text-5xl font-black text-blue-600 mb-2">
+                  <span class="counter" data-target="10">0</span
+                  ><span class="text-lg text-gray-500 font-normal ml-1"
+                    >h以下</span
+                  >
+                </div>
+                <div class="text-sm font-bold text-gray-600">
+                  月平均残業時間
+                </div>
+              </div>
+            </div>
+
+            <h4 class="text-xl font-bold text-center text-blue-900 mb-8">
+              主な施工プロジェクト例
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div
+                class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300"
+                data-aos="fade-up"
+                data-aos-delay="0"
+              >
+                <div class="h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="オフィスビル"
+                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                  />
+                </div>
+                <div class="p-6">
+                  <span
+                    class="text-xs font-bold text-blue-500 bg-blue-100 px-2 py-1 rounded"
+                    >オフィスビル</span
+                  >
+                  <h5 class="font-bold text-lg mt-2 mb-2">
+                    都内IT企業本社ビル
+                  </h5>
+                  <p class="text-sm text-gray-500">地上15階建て / 新築工事</p>
+                </div>
+              </div>
+              <div
+                class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="マンション"
+                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                  />
+                </div>
+                <div class="p-6">
+                  <span
+                    class="text-xs font-bold text-orange-500 bg-orange-100 px-2 py-1 rounded"
+                    >集合住宅</span
+                  >
+                  <h5 class="font-bold text-lg mt-2 mb-2">
+                    パークサイドレジデンス
+                  </h5>
+                  <p class="text-sm text-gray-500">全120戸 / 大規模修繕工事</p>
+                </div>
+              </div>
+              <div
+                class="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <div class="h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="公共施設"
+                    class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                  />
+                </div>
+                <div class="p-6">
+                  <span
+                    class="text-xs font-bold text-green-500 bg-green-100 px-2 py-1 rounded"
+                    >公共施設</span
+                  >
+                  <h5 class="font-bold text-lg mt-2 mb-2">区立中央図書館</h5>
+                  <p class="text-sm text-gray-500">内装リニューアル工事</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- セクション＿募集要項 -->
+
+        <section id="requirements" class="py-20 bg-white">
+          <div class="container mx-auto px-4 max-w-4xl">
+            <h3
+              class="text-3xl font-bold text-center mb-12 animate-gradient-text"
+              data-aos="fade-up"
+            >
+              募集要項
+            </h3>
+            <div
+              class="bg-white border border-gray-200 rounded-xl shadow-sm p-6 md:p-12"
+              data-aos="fade-up"
+            >
+              <dl
+                class="flex flex-col md:flex-row py-4 border-b border-gray-100"
+              >
+                <dt class="md:w-1/4 font-bold text-gray-700 mb-2 md:mb-0">
+                  職種
+                </dt>
+                <dd class="md:w-3/4 text-gray-600">
+                  建設施工管理アシスタント（未経験歓迎）
+                </dd>
+              </dl>
+              <dl
+                class="flex flex-col md:flex-row py-4 border-b border-gray-100"
+              >
+                <dt class="md:w-1/4 font-bold text-gray-700 mb-2 md:mb-0">
+                  仕事内容
+                </dt>
+                <dd class="md:w-3/4 text-gray-600">
+                  ビルやマンションなどの建設プロジェクトにおける進行管理。<br />
+                  ・現場の写真撮影、整理<br />
+                  ・安全確認の巡回<br />
+                  ・スケジュール管理のアシスタント業務<br />
+                  ※力仕事は職人さんが行うため、管理業務が中心です。
+                </dd>
+              </dl>
+              <dl
+                class="flex flex-col md:flex-row py-4 border-b border-gray-100"
+              >
+                <dt class="md:w-1/4 font-bold text-gray-700 mb-2 md:mb-0">
+                  給与
+                </dt>
+                <dd class="md:w-3/4 text-gray-600">
+                  月給30万円〜（固定残業代含む、超過分別途支給）<br />
+                  <span class="text-sm text-gray-500"
+                    >※経験・年齢を考慮の上、決定します。</span
+                  ><br />
+                  <span class="text-sm text-gray-500"
+                    >※試用期間3ヶ月あり（同条件）</span
+                  >
+                </dd>
+              </dl>
+              <dl
+                class="flex flex-col md:flex-row py-4 border-b border-gray-100"
+              >
+                <dt class="md:w-1/4 font-bold text-gray-700 mb-2 md:mb-0">
+                  勤務時間
+                </dt>
+                <dd class="md:w-3/4 text-gray-600">
+                  8:00 〜 17:00（休憩1時間）<br />※現場により多少前後しますが、原則定時退社を推奨しています。
+                </dd>
+              </dl>
+              <dl
+                class="flex flex-col md:flex-row py-4 border-b border-gray-100"
+              >
+                <dt class="md:w-1/4 font-bold text-gray-700 mb-2 md:mb-0">
+                  休日・休暇
+                </dt>
+                <dd class="md:w-3/4 text-gray-600">
+                  <span class="font-bold text-orange-500"
+                    >年間休日120日以上</span
+                  ><br />
+                  完全週休2日制（土日祝）、GW、夏季休暇、年末年始休暇、有給休暇、慶弔休暇
+                </dd>
+              </dl>
+              <dl
+                class="flex flex-col md:flex-row py-4 border-b border-gray-100"
+              >
+                <dt class="md:w-1/4 font-bold text-gray-700 mb-2 md:mb-0">
+                  福利厚生
+                </dt>
+                <dd class="md:w-3/4 text-gray-600">
+                  ・昇給年1回 / 賞与年2回<br />
+                  ・社会保険完備<br />
+                  ・交通費全額支給<br />
+                  ・資格取得支援制度（費用全額会社負担）<br />
+                  ・制服・タブレット・PC貸与
+                </dd>
+              </dl>
+              <dl class="flex flex-col md:flex-row py-4">
+                <dt class="md:w-1/4 font-bold text-gray-700 mb-2 md:mb-0">
+                  会社概要
+                </dt>
+                <dd class="md:w-3/4 text-gray-600">
+                  社名：株式会社ゆうたろう建設<br />
+                  設立：2010年4月<br />
+                  代表者：代表取締役 ゆうたろう<br />
+                  従業員数：45名<br />
+                  事業内容：総合建設業、施工管理請負
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </section>
+
+        <!-- セクション＿Q&A -->
+
+        <section id="faq" class="py-20 bg-gray-50">
+          <div class="container mx-auto px-4 max-w-3xl">
+            <h3
+              class="text-3xl font-bold text-center mb-12 animate-gradient-text"
+              data-aos="fade-up"
+            >
+              よくある質問
+            </h3>
+            <div class="space-y-6">
+              <div
+                class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"
+                data-aos="fade-up"
+              >
+                <h4 class="font-bold text-lg mb-2 text-blue-800">
+                  <i class="fas fa-question-circle mr-2"></i>Q.
+                  本当に未経験でも大丈夫ですか？
+                </h4>
+                <p class="text-gray-600">
+                  A.
+                  はい、大丈夫です。現在活躍している社員の8割が未経験からのスタートです。入社後は座学研修と現場でのOJTに加え、動画マニュアルも完備していますのでご安心ください。
+                </p>
+              </div>
+              <div
+                class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <h4 class="font-bold text-lg mb-2 text-blue-800">
+                  <i class="fas fa-question-circle mr-2"></i>Q.
+                  文系出身ですが応募できますか？
+                </h4>
+                <p class="text-gray-600">
+                  A.
+                  もちろんです。建築の知識は入社後に身につけられます。「コミュニケーションを取るのが好き」「段取りを考えるのが好き」という方なら、文系・理系問わず活躍できます。
+                </p>
+              </div>
+              <div
+                class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h4 class="font-bold text-lg mb-2 text-blue-800">
+                  <i class="fas fa-question-circle mr-2"></i>Q.
+                  女性も働いていますか？
+                </h4>
+                <p class="text-gray-600">
+                  A.
+                  はい、多くの女性社員が施工管理として活躍しています。力仕事がないため、性別に関わらず長く働ける環境です。産休・育休の取得実績もあります。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- セクション＿見学、問合せ -->
+
+        <section id="contact" class="py-20 bg-blue-900 text-white text-center">
+          <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">
+              まずは「現場見学」に来ませんか？
+            </h2>
+            <p
+              class="mb-8 text-gray-300"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              面接という堅苦しいものではなく、<br />まずは会社の雰囲気を知っていただきたいです。<br />履歴書不要、手ぶらでOKです。
+            </p>
+
+            <div
+              class="flex flex-col md:flex-row justify-center gap-4"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              <a
+                href="#"
+                class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transition duration-300"
+              >
+                <i class="fab fa-line mr-2"></i> LINEで気軽に質問
+              </a>
+              <a
+                href="#"
+                class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transition duration-300"
+              >
+                <i class="far fa-envelope mr-2"></i> 見学・応募フォーム
+              </a>
+            </div>
+            <p class="mt-6 text-sm text-gray-400">
+              お電話でのお問い合わせ：03-1234-5678（担当：佐藤）
+            </p>
+          </div>
+        </section>
+
+        <footer class="bg-gray-800 text-gray-400 py-8 text-center text-sm">
+          <p>&copy; 2025 Yutaro Construction Co., Ltd. All Rights Reserved.</p>
+        </footer>
+      </main>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // 1. AOSの初期化（アニメーション設定）
+      AOS.init({
+        duration: 1000, // 1秒かけて動く
+        once: true, // 一度だけ実行
+        offset: 100, // 100px手前で発火
+      });
+
+      // 2. 数字カウントアップの処理
+      const counters = document.querySelectorAll(".counter");
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5, // 画面に50%入ったら発火
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = +counter.getAttribute("data-target"); // 目標値を取得
+            const duration = 2000; // 2秒で完了
+            const increment = target / (duration / 16); // 1フレームあたりの増加量
+
+            let current = 0;
+            const updateCounter = () => {
+              current += increment;
+              if (current < target) {
+                // 切り上げてカンマ区切りにする
+                counter.innerText = Math.ceil(current).toLocaleString();
+                requestAnimationFrame(updateCounter);
+              } else {
+                // 最終値をセット
+                counter.innerText = target.toLocaleString();
+              }
+            };
+
+            updateCounter();
+            observer.unobserve(counter); // 監視を解除
+          }
+        });
+      }, observerOptions);
+
+      counters.forEach((counter) => {
+        observer.observe(counter);
+      });
+    </script>
+  </body>
+</html>
