@@ -1,8 +1,6 @@
 *,
-*,
-:before,
-*,
-:after {
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -14,6 +12,7 @@ body {
   letter-spacing: 0.05em;
   margin: 0 auto;
   min-height: 100vh;
+
   display: grid;
   grid-template:
     " ...... ...... ...... " 0
@@ -23,7 +22,7 @@ body {
     " ...... ...... ...... " 0
     " sect7  sect8  sect9  " 1fr
     " ...... ...... ...... " 0
-    /1fr 1fr 1fr;
+    / 1fr 1fr 1fr;
 }
 
 ul,
@@ -37,6 +36,7 @@ h1 {
 
 h2 {
   font-size: 1.1rem;
+  margin-bottom: 10px;
 }
 
 a {
@@ -49,7 +49,7 @@ p {
   line-height: 1.4rem;
 }
 
-/* サイトタイトル */
+/* セクション１＿サイトタイトル */
 #section1 {
   grid-area: sect1;
   display: flex;
@@ -61,19 +61,17 @@ p {
   font-weight: bold;
   line-height: 1.2;
   margin-top: 20px;
-}
-
-.site-logo {
   color: rgb(0, 0, 0);
-  /* text-shadow: 3px 2px 1px #a8a9aa; */
   text-shadow: 3px 2px 1px #d4d4d4;
 }
-/* 空白 */
+
+/* 空白エリア */
 #section2 {
   grid-area: sect2;
 }
-/* ワークス */
-#section2 {
+
+/* セクション３＿ワークス */
+#section3 {
   grid-area: sect3;
   display: flex;
   flex-direction: column;
@@ -82,6 +80,7 @@ p {
 }
 
 .item a {
+  display: block;
   font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 0.08em;
@@ -91,8 +90,9 @@ p {
 .item a:hover {
   opacity: 0.5;
 }
-/* プロフィール */
-#section3 {
+
+/* セクション４＿プロフィール */
+#section4 {
   grid-area: sect7;
   display: flex;
   flex-direction: column;
@@ -100,29 +100,33 @@ p {
   align-items: center;
   line-height: 30px;
 }
-/* 名前 */
-#section4 {
+
+/* セクション５＿自己紹介 */
+#section5 {
   grid-area: sect5;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .myname {
   font-weight: bold;
   line-height: 1.2;
 }
-/* イラスト */
-#section5 {
+
+/* セクション６＿イラスト */
+#section6 {
   grid-area: sect9;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-/* お問い合わせ */
-#section6 {
+
+/* セクション７＿お問い合わせ */
+#section7 {
   grid-area: sect8;
   display: flex;
   flex-direction: column;
@@ -153,26 +157,48 @@ p {
 .ad {
   margin-top: 10px;
 }
+
 /* ----------------- */
-/* media Queries 768 */
+/* スマホ表示 (max-width: 768px) */
 /* ----------------- */
 @media screen and (max-width: 768px) {
   body {
-    font-size: 0.5rem;
-    /* text-align: center; */
+    font-size: 1rem;
     display: grid;
-    grid-template:
-      " ... ..... ..... ..... ..... ..... ... " 0
-      " ... sect1 ..... sect2 ..... sect3 ... " 1fr
-      " ... ..... ..... ..... ..... ..... ... " 5px
-      " ... sect4 ..... sect5 ..... sect6 ... " 1fr
-      " ... ..... ..... ..... ..... ..... ... " 5px
-      " ... sect7 ..... sect8 ..... sect9 ... " 1fr
-      " ... ..... ..... ..... ..... ..... ... " 0
-      /5px 1fr 5px 1fr 5px 1fr 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "sect1"
+      "sect5"
+      "sect3"
+      "sect7"
+      "sect9"
+      "sect8";
+
+    /* 各セクション間の余白 */
+    gap: 40px;
+    padding: 20px 0;
+  }
+  #section2 {
+    display: none;
   }
 
   h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .myname {
     font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  /* スマホでの各セクションの微調整 */
+  .item {
+    text-align: center;
+    padding: 0 10px;
   }
 }
