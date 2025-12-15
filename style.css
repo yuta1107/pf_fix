@@ -157,48 +157,214 @@ p {
 .ad {
   margin-top: 10px;
 }
-
-/* ----------------- */
-/* スマホ表示 (max-width: 768px) */
-/* ----------------- */
+/* ------------------ */
+/*     スマホ表示     */
+/* ------------------ */
 @media screen and (max-width: 768px) {
   body {
     font-size: 1rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+
     grid-template-areas:
       "sect1"
       "sect5"
-      "sect3"
-      "sect7"
-      "sect9"
-      "sect8";
+      "sect3" /* ワークス */
+      "sect9" /* イラスト */
+      "sect7" /* プロフィール */
+      "sect8"; /* お問い合わせ */
 
-    /* 各セクション間の余白 */
-    gap: 40px;
-    padding: 20px 0;
+    gap: 0;
+    padding: 0;
+    background-color: #f9f9f9;
   }
+
   #section2 {
     display: none;
   }
 
-  h1 {
-    font-size: 1.8rem;
+  /* --- 全セクション共通のデザイン --- */
+  section {
+    border-bottom: 1px solid #333;
+    padding: 30px 24px;
+    text-align: left;
+    background-color: #fff;
   }
 
+  #section7 {
+    border-bottom: none;
+    padding-bottom: 100px;
+  }
+
+  
+  #section3,
+  #section6 {
+    
+    min-height: 160px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    color: #000;
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+
+  h2::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    margin-right: 15px;
+    margin-bottom: 6px;
+  }
+
+
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #444;
+    font-size: 0.95rem;
+  }
+
+
+  #section4 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: block;
+  }
+
+  #section4 h2 {
+    cursor: pointer;
+    padding-right: 50px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #section4 .item > *:not(h2) {
+    display: none;
+    padding-top: 20px;
+  }
+
+  #section4.is-open .item > * {
+    display: block;
+    animation: fadeIn 0.4s ease;
+  }
+
+  /* プロフィールのアイコン */
+  #section4 h2::after {
+    content: "＋";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: #888;
+    transition: transform 0.3s;
+  }
+
+  #section4.is-open h2::after {
+    content: "－";
+    color: #000;
+  }
+
+  /* 2. ワークス (#section3) */
+  #section3 h2 {
+    cursor: pointer;
+    padding-right: 50px;
+    margin-bottom: 0;
+  }
+
+  #section3 h2::after {
+    content: "→";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: normal;
+    color: #888;
+  }
+
+  #section6 h2 {
+    margin-bottom: 10px;
+    cursor: default;
+  }
+
+  /* 4. お問い合わせ (#section7) */
+  .item a,
+  .sns-link a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 30px;
+    border: 1px solid #000;
+    background-color: transparent;
+    color: #000;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 0;
+    transition: all 0.3s;
+    min-width: 200px;
+    text-align: center;
+  }
+
+  .item a:active,
+  .sns-link a:active {
+    background-color: #000;
+    color: #fff;
+  }
+
+  #section1,
+  #section5 {
+    text-align: center;
+    border-bottom: none;
+    background-color: #fff;
+  }
+
+  #section1 {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+
+  #section5 {
+    padding-top: 0;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #333;
   }
 
   .myname {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    letter-spacing: 0.1em;
   }
 
-  /* スマホでの各セクションの微調整 */
-  .item {
+  #section5 p {
     text-align: center;
-    padding: 0 10px;
+    font-size: 0.8rem;
+    color: #888;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

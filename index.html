@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- セクション１：タイトル -->
-    <section id="section1">
+    <!-- セクション1：ヘッダー -->
+
+    <section id="section1" class="header">
       <h1 class="site-logo">My<br />portfolio</h1>
     </section>
 
-    <!-- セクション２-->
+    <!-- セクション2：空白 -->
+
     <section id="section2"></section>
 
     <!-- セクション３：ワークス -->
+
     <section id="section3" class="works">
       <div class="item">
         <a href="works.html">
@@ -27,6 +30,7 @@
     </section>
 
     <!-- セクション４：プロフィール -->
+
     <section id="section4">
       <div class="item">
         <h2>プロフィール</h2>
@@ -38,7 +42,8 @@
       </div>
     </section>
 
-    <!-- セクション５：センター-->
+    <!-- セクション５センター -->
+
     <section id="section5" class="center">
       <div>
         <h1 class="myname">ゆうたろう</h1>
@@ -46,15 +51,17 @@
       </div>
     </section>
 
-    <!-- セクション６：イラスト -->
+    <!-- セクション6: イラスト -->
+
     <section id="section6" class="illustration">
       <div class="item">
         <h2>イラスト</h2>
-        <p>イラスト制作も承ります。<br />ご相談ください。</p>
+        <p>イラスト制作も承ります。<br />近日公開予定</p>
       </div>
     </section>
 
-    <!-- セクション７：お問い合わせ -->
+    <!-- セクション7: お問い合わせ -->
+
     <section id="section7" class="contact">
       <div class="item">
         <h2>お問い合わせはこちら</h2>
@@ -73,5 +80,31 @@
         </div>
       </div>
     </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // スマホ表示かどうか判定
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+        if (isMobile) {
+          // 開閉させたいセクションのIDを指定
+          // section4=プロフィール, section6=イラスト, section7=お問い合わせ
+          const targets = ["section4", "section6", "section7"];
+
+          targets.forEach((id) => {
+            const section = document.getElementById(id);
+            if (!section) return;
+
+            // h2（見出し）をクリックしたらクラスを付け外しする
+            const title = section.querySelector("h2");
+            if (title) {
+              title.addEventListener("click", () => {
+                section.classList.toggle("is-open");
+              });
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>
