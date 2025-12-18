@@ -1,20 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Lucideアイコンの初期化
     lucide.createIcons();
-
     // ★変数をここでまとめて定義
     const header = document.getElementById('header');
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileLinks = document.querySelectorAll('.mobile-link');
-
     // 1. スクロール時のフェードインアニメーション
     const observerOptions = {
         root: null,
         rootMargin: '0px',
         threshold: 0.1
     };
-
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -23,33 +20,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, observerOptions);
-
     document.querySelectorAll('.fade-in').forEach(el => {
         observer.observe(el);
     });
-
     // 2. ヘッダーのスクロール制御
     window.addEventListener('scroll', () => {
         const menuBtnIcon = menuBtn ? menuBtn.querySelector('i') : null;
-        
         if (window.scrollY > 50) {
             header.classList.add('bg-white', 'shadow-md', 'text-gray-800');
             header.classList.remove('text-white', 'bg-transparent');
-            if(menuBtnIcon) menuBtnIcon.style.stroke = "#333"; 
+            if (menuBtnIcon) menuBtnIcon.style.stroke = "#333";
         } else {
             header.classList.remove('bg-white', 'shadow-md', 'text-gray-800');
             header.classList.add('text-white', 'bg-transparent');
-            
             // モバイルメニューが閉じている時だけ、アイコンを白に戻す
-            if(menuBtnIcon && mobileMenu && mobileMenu.classList.contains('translate-x-full')) { 
+            if (menuBtnIcon && mobileMenu && mobileMenu.classList.contains('translate-x-full')) {
                 menuBtnIcon.style.stroke = "currentColor";
             }
         }
     });
-
     // 3. モバイルメニューの制御
     let isMenuOpen = false;
-
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener('click', () => {
             isMenuOpen = !isMenuOpen;
@@ -67,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 lucide.createIcons();
             }
         });
-
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 isMenuOpen = false;
@@ -81,12 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // 5. FAQのアコーディオン制御
     const faqItems = document.querySelectorAll('.faq-item');
-    
     faqItems.forEach(item => {
         const button = item.querySelector('.faq-btn');
         const answer = item.querySelector('.faq-answer');
         const icon = item.querySelector('.faq-icon');
-
         button.addEventListener('click', () => {
             // 答えの表示/非表示を切り替え
             answer.classList.toggle('hidden');

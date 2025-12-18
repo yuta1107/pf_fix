@@ -4,11 +4,10 @@
   --bg-light: #f9f7f2;
   --text-dark: #333333;
 }
-
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
-
 body {
   font-family: "Noto Sans JP", sans-serif;
   background-color: var(--bg-light);
@@ -16,26 +15,22 @@ body {
   line-height: 1.8;
   overflow-x: hidden;
 }
-
 h1,
 h2,
 h3,
 .serif {
   font-family: "Playfair Display", serif;
 }
-
 /* ふわっと表示されるアニメーション */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
-
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
 /* ボタンのホバーエフェクト */
 .btn-hover {
   transition: all 0.3s ease;
@@ -44,12 +39,10 @@ h3,
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
 /* モバイルメニューのスタイル */
 #mobile-menu {
   transition: transform 0.3s ease-in-out;
 }
-
 /* フォームのフォーカススタイル */
 input:focus,
 textarea:focus,
@@ -58,7 +51,6 @@ select:focus {
   border-color: var(--primary-color);
   box-shadow: 0 0 0 2px rgba(141, 163, 153, 0.2);
 }
-
 /* 【追加】動画の上の文字を読みやすくする影 */
 .text-shadow {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
