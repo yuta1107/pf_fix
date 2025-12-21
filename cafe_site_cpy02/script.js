@@ -1,53 +1,60 @@
 $(function() {
 
-  // ------------------------------------------
-  // 1. ページ内スクロール（既存の機能）
-  // ------------------------------------------
+  // ---------------------
+  // 1. ページ内スクロール
+  // ---------------------
   $('a[href^="#"]').on('click', function() {
     var speed = 300;
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top;
+    
+    // PCの場合は固定ヘッダーの高さを引く
+    var headerHeight = 0;
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      headerHeight = $('.gnav').outerHeight();
+    }
+
+    var position = target.offset().top - headerHeight;
+    
     $("html, body").animate({
       scrollTop: position
     }, speed, "swing");
+    
+    // スマホメニューが開いている場合は閉じる
+    $('.hamburger').removeClass('active');
+    $('.gnav').removeClass('active');
+    
     return false;
   });
 
-  // ------------------------------------------
-  // 2. ページ上部へ戻るボタン（既存の機能）
-  // ------------------------------------------
+  // -----------------------
+  // 2. ページ上部へ戻るボタン
+  // -------------------------
   var backToTop = $('#backToTop');
   backToTop.hide();
+  
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 50) {
+    if ($(this).scrollTop() > 100) {
       backToTop.fadeIn();
     } else {
       backToTop.fadeOut();
     }
   });
-  $('#backToTop').on('click', function() {
-    $('body,html').animate({
+
+  $('#backToTop a').on('click', function(event) {
+    event.preventDefault();
+    $('body, html').animate({
       scrollTop: 0
     }, 300);
-    return false;
   });
 
-  // ------------------------------------------
-  // 3. ハンバーガーメニュー（今回追加した機能）
-  // ------------------------------------------
+  // -----------------------
+  // 3. ハンバーガーメニュー
+  // -----------------------
   
-  // ハンバーガーボタンをクリックした時の処理
   $('.hamburger').on('click', function() {
-    // ボタンとメニューに .active クラスを付け外しする
     $(this).toggleClass('active');
     $('.gnav').toggleClass('active');
-  });
-
-  // メニューのリンクをクリックした時の処理（メニューを閉じる）
-  $('.gnav-link').on('click', function() {
-    $('.hamburger').removeClass('active');
-    $('.gnav').removeClass('active');
   });
 
 });
