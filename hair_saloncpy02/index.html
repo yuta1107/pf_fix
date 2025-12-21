@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Oswald:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -17,15 +17,26 @@
     <!-- header__ヘッダー -->
     <header>
       <div class="logo">Lumière</div>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-decoration">Lumière</div>
       <nav>
         <ul>
-          <li><a href="#concept">Concept</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#gallery">Style</a></li>
-          <li><a href="#access">Access</a></li>
+          <li><a href="#concept">CONCEPT</a></li>
+          <li><a href="#menu">MENU</a></li>
+          <li><a href="#gallery">STYLE</a></li>
+          <li><a href="#access">ACCESS</a></li>
+          <li class="sp-btn-area">
+            <a href="#" class="btn-reserve-sp">RESERVATION</a>
+          </li>
         </ul>
       </nav>
-      <a href="#" class="btn-reserve">ご予約</a>
+
+      <a href="#" class="btn-reserve pc-only">ご予約</a>
     </header>
     <!-- header__ヘッダーend -->
     <!-- hero__ヒーロー -->
@@ -90,7 +101,7 @@
       </div>
     </section>
     <!-- section__メニューend -->
-    <!-- section__スタイル -->
+    <!-- section__ギャラリー -->
     <section id="gallery">
       <h2 class="section-title">Style Gallery</h2>
       <div class="gallery-grid">
@@ -120,7 +131,7 @@
         </div>
       </div>
     </section>
-    <!-- section__スタイルend -->
+    <!-- section__ギャラリーend -->
     <!-- section__インスタ投稿 -->
     <section id="instagram">
       <div class="instagram-header">
@@ -239,5 +250,33 @@
       <p>&copy; 2025 Lumière Hair Salon. All Rights Reserved.</p>
     </footer>
     <!-- footer__フッターend -->
+
+    <!-- ハンバーガーメニュー -->
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navDecoration = document.querySelector(".nav-decoration"); // 追加
+      const nav = document.querySelector("nav");
+      const navLinks = document.querySelectorAll("nav a");
+
+      // メニューの開閉処理を関数化
+      const toggleMenu = () => {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("active");
+      };
+
+      // ハンバーガーアイコンをクリックした時
+      hamburger.addEventListener("click", toggleMenu);
+
+      // ★追加: Lumièreの文字をクリックした時もメニューを開閉
+      navDecoration.addEventListener("click", toggleMenu);
+
+      // メニュー内のリンクをクリックしたら閉じる
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          nav.classList.remove("active");
+        });
+      });
+    </script>
   </body>
 </html>
